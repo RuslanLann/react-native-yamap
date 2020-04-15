@@ -105,7 +105,7 @@ public class YamapView extends MapView implements UserLocationObjectListener {
     // ref methods
     public void setCenter(Point location, float zoom) {
         // todo[0]: добавить параметры анимации
-        getMap().move(new CameraPosition(location, zoom, 0.0F, 0.0F), new Animation(Animation.Type.SMOOTH, 1.8F), null);
+        getMap().move(new CameraPosition(location, zoom, 0.0F, 0.0F), new Animation(Animation.Type.SMOOTH, 0.4F), null);
     }
 
     public void findRoutes(ArrayList<Point> points, final ArrayList<String> vehicles, final String id) {
@@ -227,7 +227,7 @@ public class YamapView extends MapView implements UserLocationObjectListener {
         BoundingBox boundingBox = new BoundingBox(southWest, northEast);
         CameraPosition cameraPosition = getMap().cameraPosition(boundingBox);
         cameraPosition = new CameraPosition(cameraPosition.getTarget(), cameraPosition.getZoom() - 0.8f, cameraPosition.getAzimuth(), cameraPosition.getTilt());
-        getMap().move(cameraPosition, new Animation(Animation.Type.SMOOTH, 0.7f), null);
+        getMap().move(cameraPosition, new Animation(Animation.Type.SMOOTH, 0.4f), null);
     }
 
     // props
