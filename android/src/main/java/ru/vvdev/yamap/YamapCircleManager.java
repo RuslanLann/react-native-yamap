@@ -62,19 +62,19 @@ public class YamapCircleManager extends ViewGroupManager<YamapCircle> {
 
     @ReactProp(name = "strokeWidth")
     public void setStrokeWidth(View view, float width) {
-        castToPCircleView(view).setStrokeWidth(width);
+        castToCircleView(view).setStrokeWidth(width);
     }
 
     @ReactProp(name = "strokeColor")
     public void setStrokeColor(View view, int color) {
-        castToPCircleView(view).setStrokeColor(color);
+        castToCircleView(view).setStrokeColor(color);
     }
     @ReactProp(name = "fillColor")
     public void setFillColor(View view, int color) {
-        castToPCircleView(view).setFillColor(color);
+        castToCircleView(view).setFillColor(color);
     }
     @ReactProp(name = "zIndex")
     public void setZIndex(View view, int zIndex) {
-        castToPCircleView(view).setZIndex(zIndex);
+        castToCircleView(view).setZIndex(zIndex);
     }
 }
