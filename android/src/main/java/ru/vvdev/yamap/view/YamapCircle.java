@@ -27,8 +27,8 @@ public class YamapCircle extends ReactViewGroup implements MapObjectTapListener,
     private final Point CIRCLE_CENTER = new Point(55.753215, 37.622504);
 
     public Point point;
-    private CircleMapObject mapObject;
-    private CircleMapObject circle = new Circle(CIRCLE_CENTER, 100f);
+    public CircleMapObject mapObject;
+    public CircleMapObject circle = new Circle(CIRCLE_CENTER, 100f);
     private int fillColor = Color.BLACK;
     private int strokeColor = Color.BLACK;
     private int zIndex = 1;
