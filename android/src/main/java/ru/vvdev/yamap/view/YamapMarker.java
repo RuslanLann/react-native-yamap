@@ -30,7 +30,7 @@ public class YamapMarker extends ReactViewGroup implements MapObjectTapListener,
     public Point point;
     private int zIndex = 1;
     private float scale = 1;
-    private PointF anchor = new PointF(0.5f, 1.0f);
+    private PointF anchor = new PointF(0.5f, 0.5f);
     private String iconSource;
     private View _childView;
     private PlacemarkMapObject mapObject;
