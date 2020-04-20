@@ -56,8 +56,11 @@ public class YamapCircleManager extends ViewGroupManager<YamapCircle> {
         if (markerPoint != null) {
             double lon = markerPoint.getDouble("lon");
             double lat = markerPoint.getDouble("lat");
+
             Point point = new Point(lat, lon);
-            castToCircleView(view).setPoint(point);
+            Circle circle = new Circle(point, 100f);
+            
+            castToCircleView(view).setCircle(circle);
         }
     }
 
