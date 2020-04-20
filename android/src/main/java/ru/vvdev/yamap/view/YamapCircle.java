@@ -76,7 +76,7 @@ public class YamapCircle extends ReactViewGroup implements MapObjectTapListener,
     }
 
     public void setMapObject(MapObject obj) {
-        mapObject = (PlacemarkMapObject) obj;
+        mapObject = (CircleMapObject) obj;
         mapObject.addTapListener(this);
         updateCircle();
     }
