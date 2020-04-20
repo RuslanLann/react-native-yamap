@@ -29,7 +29,7 @@ public class YamapCircle extends ReactViewGroup implements MapObjectTapListener,
     private CircleMapObject mapObject;
     private int fillColor = Color.GREEN;
     private int strokeColor = Color.GREEN;
-    private float strokeWidth = 1.f;
+    private float strokeWidth = 1f;
     private int zIndex = 1;
 
     public YamapCircle(Context context) {

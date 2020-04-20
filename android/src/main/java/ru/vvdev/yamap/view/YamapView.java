@@ -392,7 +392,7 @@ public class YamapView extends MapView implements UserLocationObjectListener {
             childs.add(_child);
         } else if (child instanceof YamapCircle) {
             YamapCircle _child = (YamapCircle) child;
-            CircleMapObject obj = getMap().getMapObjects().addCircle(_child.circle, _child.strokeColor, _child.strokeWidth, _child.fillColor);
+            CircleMapObject obj = getMap().getMapObjects().addCircle(_child.circle, Color.GREEN, 1, Color.RED);
             _child.setMapObject(obj);
             childs.add(_child);
         }
