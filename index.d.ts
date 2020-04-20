@@ -80,6 +80,18 @@ interface MarkerProps {
 export class Marker extends React.Component<MarkerProps> {
 }
 
+interface CircleProps {
+  fillColor?: string;
+  strokeColor?: string;
+  strokeWidth?: number;
+  zIndex?: number;
+  onPress?: () => void;
+  point: Point;
+}
+
+export class Circle extends React.Component<CircleProps> {
+}
+
 interface PolylineProps {
   strokeColor?: string;
   outlineColor?: string;
