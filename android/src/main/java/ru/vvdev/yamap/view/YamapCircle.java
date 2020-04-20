@@ -24,9 +24,9 @@ import ru.vvdev.yamap.utils.Callback;
 import ru.vvdev.yamap.utils.ImageLoader;
 
 public class YamapCircle extends ReactViewGroup implements MapObjectTapListener, ReactMapObject {
-    public Point point = new Point(55.753215, 37.622504);
-    public CircleMapObject mapObject;
-    public Circle circle = new Circle(point, 100f);
+    public Circle circle;
+    public Point point;
+    private CircleMapObject mapObject;
     private int fillColor = Color.BLACK;
     private int strokeColor = Color.BLACK;
     private int zIndex = 1;
@@ -34,6 +34,7 @@ public class YamapCircle extends ReactViewGroup implements MapObjectTapListener,
 
     public YamapCircle(Context context) {
         super(context);
+        circle = new Circle(new Point(55.753215, 37.622504), 100f);
     }
 
     @Override
@@ -41,9 +42,14 @@ public class YamapCircle extends ReactViewGroup implements MapObjectTapListener,
     }
 
     // props
-    public void setCircle(Circle _circle) {
-        circle = _circle;
+    public void setCirclePoint(Point _point) {
+        point = _point;
+        updateCircleGeometry();
         updateCircle();
+    }
+
+    private void updateCircleGeometry() {
+        circle = new Circle(point, 100f);
     }
 
     public void setStrokeColor(int _color) {
