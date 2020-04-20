@@ -34,6 +34,7 @@ import com.yandex.mapkit.map.CircleMapObject;
 import com.yandex.mapkit.map.PolygonMapObject;
 import com.yandex.mapkit.map.PolylineMapObject;
 import com.yandex.mapkit.mapview.MapView;
+import com.yandex.mapkit.map.IconStyle;
 import com.yandex.mapkit.transport.TransportFactory;
 import com.yandex.mapkit.transport.masstransit.MasstransitOptions;
 import com.yandex.mapkit.transport.masstransit.MasstransitRouter;
@@ -427,8 +428,14 @@ public class YamapView extends MapView implements UserLocationObjectListener {
             PlacemarkMapObject pin = userLocationView.getPin();
             PlacemarkMapObject arrow = userLocationView.getArrow();
             if (userLocationBitmap != null) {
-                pin.setIcon(ImageProvider.fromBitmap(userLocationBitmap));
-                arrow.setIcon(ImageProvider.fromBitmap(userLocationBitmap));
+                pin.setIcon(
+                    ImageProvider.fromBitmap(userLocationBitmap), 
+                    new IconStyle().setScale(0.2f)
+                );
+                arrow.setIcon(
+                    ImageProvider.fromBitmap(userLocationBitmap),
+                    new IconStyle().setScale(0.2f)
+                );
             }
         }
     }
