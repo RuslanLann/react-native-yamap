@@ -81,8 +81,8 @@ public class YamapMarkerManager extends ViewGroupManager<YamapMarker> {
     @ReactProp(name = "anchor")
     public void setAnchor(View view, ReadableMap anchor) {
         if (anchor != null) {
-            float x = anchor.getFloat("x");
-            float y = anchor.getFloat("y");
+            float x = anchor.getDouble("x").floatValue();
+            float y = anchor.getDouble("y").floatValue();
             PointF anchorPoint = new PointF(x, y);
             castToMarkerView(view).setAnchor(anchorPoint);
         }
