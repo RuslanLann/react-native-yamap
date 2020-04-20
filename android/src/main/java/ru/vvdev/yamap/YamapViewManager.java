@@ -139,7 +139,7 @@ public class YamapViewManager extends ViewGroupManager<YamapView> {
    
     @ReactProp(name = "userLocationIconScale")
     public void setUserLocationIconScale(View view, float userLocationIconScale) {
-        castToMarkerView(view).setUserLocationIconScale(userLocationIconScale);
+        castToYaMapView(view).setUserLocationIconScale(userLocationIconScale);
     }
 
     @Override
