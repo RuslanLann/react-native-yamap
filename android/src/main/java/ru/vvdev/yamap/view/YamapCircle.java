@@ -12,6 +12,7 @@ import com.facebook.react.bridge.WritableMap;
 import com.facebook.react.uimanager.events.RCTEventEmitter;
 import com.facebook.react.views.view.ReactViewGroup;
 import com.yandex.mapkit.geometry.Point;
+import com.yandex.mapkit.geometry.Circle;
 import com.yandex.mapkit.map.MapObject;
 import com.yandex.mapkit.map.MapObjectTapListener;
 import com.yandex.mapkit.map.CircleMapObject;
@@ -27,7 +28,7 @@ public class YamapCircle extends ReactViewGroup implements MapObjectTapListener,
 
     public Point point;
     private CircleMapObject mapObject;
-    public CircleMapObject circle = mapObject.addCircle(new Circle(CIRCLE_CENTER, 100), Color.GREEN, 2, Color.RED);
+    private CircleMapObject circle = mapObject.addCircle(new Circle(CIRCLE_CENTER, 100f), Color.GREEN, 2, Color.RED);
     private int fillColor = Color.BLACK;
     private int strokeColor = Color.BLACK;
     private int zIndex = 1;
