@@ -29,7 +29,7 @@ import ru.vvdev.yamap.utils.ImageLoader;
 public class YamapMarker extends ReactViewGroup implements MapObjectTapListener, ReactMapObject {
     public Point point;
     private int zIndex = 1;
-    private float scale = 1;
+    private float scale = 1f;
     private PointF anchor = new PointF(0.5f, 0.5f);
     private String iconSource;
     private View _childView;
