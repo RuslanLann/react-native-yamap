@@ -23,9 +23,11 @@ import ru.vvdev.yamap.utils.Callback;
 import ru.vvdev.yamap.utils.ImageLoader;
 
 public class YamapCircle extends ReactViewGroup implements MapObjectTapListener, ReactMapObject {
+    private final Point CIRCLE_CENTER = new Point(55.753215, 37.622504);
+
     public Point point;
-    private int zIndex = 1;
     private CircleMapObject mapObject;
+    public CircleMapObject circle = mapObject.addCircle(new Circle(CIRCLE_CENTER, 100), Color.GREEN, 2, Color.RED);
     private int fillColor = Color.BLACK;
     private int strokeColor = Color.BLACK;
     private int zIndex = 1;
@@ -40,7 +42,7 @@ public class YamapCircle extends ReactViewGroup implements MapObjectTapListener,
     }
 
     // props
-    public void setPoint(Point _point) {
+    public void setCircle(Point _point) {
         point = _point;
         updateCircle();
     }
@@ -67,7 +69,7 @@ public class YamapCircle extends ReactViewGroup implements MapObjectTapListener,
 
     private void updateCircle() {
         if (mapObject != null) {
-            mapObject.setGeometry(point);
+            mapObject.setGeometry(circle);
             mapObject.setStrokeWidth(strokeWidth);
             mapObject.setStrokeColor(strokeColor);
             mapObject.setFillColor(fillColor);
@@ -85,10 +87,10 @@ public class YamapCircle extends ReactViewGroup implements MapObjectTapListener,
         return mapObject;
     }
 
-    @Override
-    public boolean onMapObjectTap(@NonNull MapObject mapObject, @NonNull Point point) {
-        WritableMap e = Arguments.createMap();
-        ((ReactContext) getContext()).getJSModule(RCTEventEmitter.class).receiveEvent(getId(), "onPress", e);
-        return false;
-    }
+    // @Override
+    // public boolean onMapObjectTap(@NonNull MapObject mapObject, @NonNull Point point) {
+    //     WritableMap e = Arguments.createMap();
+    //     ((ReactContext) getContext()).getJSModule(RCTEventEmitter.class).receiveEvent(getId(), "onPress", e);
+    //     return false;
+    // }
 }

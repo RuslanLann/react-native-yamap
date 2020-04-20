@@ -51,12 +51,12 @@ public class YamapCircleManager extends ViewGroupManager<YamapCircle> {
 
     // props
     @ReactProp(name = "point")
-    public void setPoint(View view, ReadableMap circlePoint) {
+    public void setCircle(View view, ReadableMap circlePoint) {
         if (circlePoint != null) {
             double lon = circlePoint.getDouble("lon");
             double lat = circlePoint.getDouble("lat");
-            Point point = new Point(lat, lon);
-            castToCircleView(view).setPoint(point);
+            Circle circle = new Circle(new Point(lat, lon), 100);
+            castToCircleView(view).setCircle(circle);
         }
     }
 
