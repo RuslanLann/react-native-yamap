@@ -73,7 +73,7 @@ public class YamapMarker extends ReactViewGroup implements MapObjectTapListener,
     }
     
     public void setAnchor(PointF _anchor) {
-        iconAnchor = new PointF(_anchor.x, _anchor.y);
+        anchor = new PointF(_anchor.x, _anchor.y);
         updateMarker();
     }
 
