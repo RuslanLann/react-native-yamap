@@ -70,8 +70,8 @@ public class YamapCircle extends ReactViewGroup implements MapObjectTapListener,
 
     private void updateCircle() {
         if (mapObject != null) {
-            private Circle curGeometry = circle.getGeometry();
-            private Circle newGeometry = new Circle(curGeometry.getCenter(), 100);
+            Circle curGeometry = circle.getGeometry();
+            Circle newGeometry = new Circle(curGeometry.getCenter(), 100);
             circle.setGeometry(newGeometry);
             
             // mapObject.setGeometry(circle);
