@@ -82,8 +82,8 @@ public class YamapMarkerManager extends ViewGroupManager<YamapMarker> {
     public void setAnchor(View view, ReadableMap anchor) {
    
         if (anchor != null) {
-            float x = anchor.getInt("x");
-            float y = anchor.getInt("y");
+            float x = Float.parseFloat(anchor.getString("x"));
+            float y = Float.parseFloat(anchor.getString("y"));
 
             PointF anchorPoint = new PointF(x, y);
             castToMarkerView(view).setAnchor(anchorPoint);
