@@ -1,6 +1,7 @@
 package ru.vvdev.yamap;
 
 import android.view.View;
+import android.graphics.PointF;
 
 import com.facebook.react.bridge.ReadableArray;
 import com.facebook.react.bridge.ReadableMap;
@@ -79,7 +80,12 @@ public class YamapMarkerManager extends ViewGroupManager<YamapMarker> {
 
     @ReactProp(name = "anchor")
     public void setAnchor(View view, ReadableMap anchor) {
-        castToMarkerView(view).setAnchor(anchor);
+        if (anchor != null) {
+            double x = anchor.getDouble("x");
+            double y = anchor.getDouble("y");
+            PointF anchorPoint = new PointF(x, y);
+            castToMarkerView(view).setAnchor(anchorPoint);
+        }
     }
 
     @Override
