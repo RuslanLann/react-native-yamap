@@ -9,6 +9,7 @@ import com.facebook.react.uimanager.ThemedReactContext;
 import com.facebook.react.uimanager.ViewGroupManager;
 import com.facebook.react.uimanager.annotations.ReactProp;
 import com.yandex.mapkit.geometry.Circle;
+import com.yandex.mapkit.geometry.Point;
 
 import java.util.ArrayList;
 import java.util.Map;
