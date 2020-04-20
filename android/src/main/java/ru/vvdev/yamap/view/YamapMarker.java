@@ -3,6 +3,7 @@ package ru.vvdev.yamap.view;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
+import android.graphics.PointF;
 import android.view.View;
 
 import androidx.annotation.NonNull;
@@ -29,6 +30,7 @@ public class YamapMarker extends ReactViewGroup implements MapObjectTapListener,
     public Point point;
     private int zIndex = 1;
     private float scale = 1;
+    private PointF anchor = new PointF(0.5f, 1.0f);
     private String iconSource;
     private View _childView;
     private PlacemarkMapObject mapObject;
@@ -69,11 +71,17 @@ public class YamapMarker extends ReactViewGroup implements MapObjectTapListener,
         iconSource = source;
         updateMarker();
     }
+    
+    public void setIconAnchor(PointF _anchor) {
+        iconAnchor = new PointF(_anchor.x, _anchor.y);
+        updateMarker();
+    }
 
     private void updateMarker() {
         if (mapObject != null) {
             final IconStyle iconStyle = new IconStyle();
             iconStyle.setScale(scale);
+            iconStyle.setAnchor(anchor);
             mapObject.setGeometry(point);
             mapObject.setZIndex(zIndex);
             mapObject.setIconStyle(iconStyle);

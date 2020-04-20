@@ -8,6 +8,11 @@ export interface Point {
   lon: number,
 }
 
+export interface Anchor {
+  x: number,
+  y: number,
+}
+
 export type MasstransitVehicles = 'bus' | 'trolleybus' | 'tramway' | 'minibus' | 'suburban' | 'underground' | 'ferry' | 'cable' | 'funicular';
 
 export type Vehicles = MasstransitVehicles | 'walk' | 'car';
@@ -66,6 +71,7 @@ interface MarkerProps {
   children?: React.ReactElement;
   zIndex?: number;
   scale?: number;
+  anchor?: Anchor[];
   onPress?: () => void;
   point: Point;
   source?: ImageSource;
