@@ -28,7 +28,7 @@ public class YamapCircle extends ReactViewGroup implements MapObjectTapListener,
 
     public Point point;
     private CircleMapObject mapObject;
-    private CircleMapObject circle = mapObject.addCircle(new Circle(CIRCLE_CENTER, 100f), Color.GREEN, 2, Color.RED);
+    private CircleMapObject circle = new Circle(CIRCLE_CENTER, 100f);
     private int fillColor = Color.BLACK;
     private int strokeColor = Color.BLACK;
     private int zIndex = 1;
@@ -70,7 +70,11 @@ public class YamapCircle extends ReactViewGroup implements MapObjectTapListener,
 
     private void updateCircle() {
         if (mapObject != null) {
-            mapObject.setGeometry(circle);
+            private Circle curGeometry = circle.getGeometry();
+            private Circle newGeometry = new Circle(curGeometry.getCenter(), 100);
+            circle.setGeometry(newGeometry);
+            
+            // mapObject.setGeometry(circle);
             mapObject.setStrokeWidth(strokeWidth);
             mapObject.setStrokeColor(strokeColor);
             mapObject.setFillColor(fillColor);
