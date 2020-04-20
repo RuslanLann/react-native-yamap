@@ -89,6 +89,7 @@ public class YamapView extends MapView implements UserLocationObjectListener {
 
     // location
     private UserLocationView userLocationView = null;
+    private float userLocationIconScale = 1f;
 
     public YamapView(Context context) {
         super(context);
@@ -245,6 +246,11 @@ public class YamapView extends MapView implements UserLocationObjectListener {
                 }
             }
         });
+    }
+
+    public void setUserLocationIconScale(float _userLocationIconScale) {
+        userLocationIconScale = _userLocationIconScale;
+        updateUserLocationIcon();
     }
 
     private WritableMap convertRouteSection(Route route, final Section section, Polyline geometry, Weight routeWeight, int routeIndex) {
@@ -430,11 +436,11 @@ public class YamapView extends MapView implements UserLocationObjectListener {
             if (userLocationBitmap != null) {
                 pin.setIcon(
                     ImageProvider.fromBitmap(userLocationBitmap), 
-                    new IconStyle().setScale(0.2f)
+                    new IconStyle().setScale(userLocationIconScale)
                 );
                 arrow.setIcon(
                     ImageProvider.fromBitmap(userLocationBitmap),
-                    new IconStyle().setScale(0.2f)
+                    new IconStyle().setScale(userLocationIconScale)
                 );
             }
         }
