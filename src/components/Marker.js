@@ -11,15 +11,6 @@ export default class Marker extends React.Component {
   };
 
   static getDerivedStateFromProps(nextProps, prevState) {
-    if (Platform.OS === 'ios') {
-      return {
-        children: nextProps.children,
-        recreateKey:
-          nextProps.children === prevState.children
-            ? prevState.recreateKey
-            : !prevState.recreateKey,
-      };
-    }
     return {
       children: nextProps.children,
       recreateKey: Boolean(nextProps.children),

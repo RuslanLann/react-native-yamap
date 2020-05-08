@@ -49,19 +49,12 @@ export default class YaMap extends React.Component {
   }
 
   getCommand(cmd) {
-    if (Platform.OS === 'ios') {
-      return UIManager.getViewManagerConfig('YamapView').Commands[cmd];
-    } else {
       return cmd;
-    }
   }
 
   findRoutes(points, vehicles, cb) {
     const cbId = CallbacksManager.addCallback(cb);
-    const args =
-      Platform.OS === 'ios'
-        ? [{points, vehicles, id: cbId}]
-        : [points, vehicles, cbId];
+    const args = [points, vehicles, cbId];
     UIManager.dispatchViewManagerCommand(
       findNodeHandle(this),
       this.getCommand('findRoutes'),
