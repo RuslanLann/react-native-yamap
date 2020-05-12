@@ -49,7 +49,7 @@ public class YamapCircle extends ReactViewGroup implements MapObjectTapListener,
     }
 
     private void updateCircleGeometry() {
-        circle = new Circle(point, 100f);
+        circle = new Circle(point, 200f);
     }
 
     public void setStrokeColor(int _color) {
