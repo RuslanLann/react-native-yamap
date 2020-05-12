@@ -34,7 +34,7 @@ public class YamapCircle extends ReactViewGroup implements MapObjectTapListener,
 
     public YamapCircle(Context context) {
         super(context);
-        circle = new Circle(new Point(55.676265, 37.519503), 100f);
+        circle = new Circle(new Point(55.676265, 37.519503), 200f);
     }
 
     @Override
