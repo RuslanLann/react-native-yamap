@@ -28,7 +28,6 @@
 		E10B9C76246D29A300764F7A /* YamapMarker.h in Headers */ = {isa = PBXBuildFile; fileRef = E10B9C6E246D29A300764F7A /* YamapMarker.h */; };
 		E10B9C77246D29A300764F7A /* YamapMarker.m in Sources */ = {isa = PBXBuildFile; fileRef = E10B9C6F246D29A300764F7A /* YamapMarker.m */; };
 		E10B9C78246D29A300764F7A /* YamapCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = E10B9C70246D29A300764F7A /* YamapCircle.m */; };
-		E10B9C7A246D29CC00764F7A /* YamapCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10B9C79246D29CC00764F7A /* YamapCircleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,8 +52,6 @@
 		E10B9C6E246D29A300764F7A /* YamapMarker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YamapMarker.h; sourceTree = "<group>"; };
 		E10B9C6F246D29A300764F7A /* YamapMarker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YamapMarker.m; sourceTree = "<group>"; };
 		E10B9C70246D29A300764F7A /* YamapCircle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YamapCircle.m; sourceTree = "<group>"; };
-		E10B9C79246D29CC00764F7A /* YamapCircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YamapCircleView.swift; sourceTree = "<group>"; };
-		E10B9C7E246D2D4E00764F7A /* RNYamap-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RNYamap-Bridging-Header.h"; sourceTree = "<group>"; };
 		E10B9C80246D2FF700764F7A /* libRNYamap.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNYamap.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E10B9C82246D304A00764F7A /* libRNYamap.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libRNYamap.a; path = "../../../../../../Library/Developer/Xcode/DerivedData/RNYamap-eyoctficietuwyhezgdzjorvkhib/Build/Products/Debug-iphonesimulator/libRNYamap.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -111,8 +108,6 @@
 				E10B9C63246D298800764F7A /* YamapPolygonView.h */,
 				E10B9C5D246D289400764F7A /* YamapPolylineView.m */,
 				E10B9C5F246D28A000764F7A /* YamapPolylineView.h */,
-				E10B9C79246D29CC00764F7A /* YamapCircleView.swift */,
-				E10B9C7E246D2D4E00764F7A /* RNYamap-Bridging-Header.h */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -223,7 +218,6 @@
 				B3E7B58A1CC2AC0600A0062D /* RNYamap.m in Sources */,
 				D6ABBD14223667300060C368 /* YamapView.m in Sources */,
 				E10B9C71246D29A300764F7A /* YamapPolyline.m in Sources */,
-				E10B9C7A246D29CC00764F7A /* YamapCircleView.swift in Sources */,
 				E10B9C77246D29A300764F7A /* YamapMarker.m in Sources */,
 				D6D0D4D3222E7E4900838171 /* RCTConvert+Yamap.m in Sources */,
 			);
