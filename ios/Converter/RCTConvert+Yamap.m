@@ -48,4 +48,13 @@
     return [self float:json[@"zoom"]];
 }
 
++ (NSValue *)Anchor:(id)json {
+  json = [self NSDictionary:json];
+  
+  CGPoint anchorPoint = CGPointMake([self CGFloat:json[@"x"]], [self CGFloat:json[@"y"]]);
+  NSValue *anchor = [NSValue valueWithCGPoint:anchorPoint];
+  
+  return anchor;
+}
+
 @end

@@ -19,6 +19,7 @@
 
 // props
 -(void) setUserLocationIcon:(NSString*) iconSource;
+-(void) setUserLocationIconScale:(NSNumber*) _userLocationIconScale;
 
 @end
 

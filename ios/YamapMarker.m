@@ -18,37 +18,41 @@
 RCT_EXPORT_MODULE()
 
 - (NSArray<NSString *> *)supportedEvents {
-    return @[@"onPress"];
+  return @[@"onPress"];
 }
 
 - (instancetype)init {
-    self = [super init];
-    return self;
+  self = [super init];
+  return self;
 }
 
 - (UIView *_Nullable)view {
-    return [[YamapMarkerView alloc] init];
+  return [[YamapMarkerView alloc] init];
 }
 
 // props
 RCT_EXPORT_VIEW_PROPERTY(onPress, RCTBubblingEventBlock)
 
 RCT_CUSTOM_VIEW_PROPERTY (point, YMKPoint, YamapMarkerView) {
-    if (json != nil) {
-        [view setPoint: [RCTConvert YMKPoint:json]];
-    }
+  if (json != nil) {
+    [view setPoint: [RCTConvert YMKPoint:json]];
+  }
 }
 
 RCT_CUSTOM_VIEW_PROPERTY(scale, NSNumber, YamapMarkerView) {
-    [view setScale: json];
+  [view setScale: json];
+}
+
+RCT_CUSTOM_VIEW_PROPERTY(anchor, NSValue, YamapMarkerView) {
+  [view setAnchor: [RCTConvert Anchor:json]];
 }
 
 RCT_CUSTOM_VIEW_PROPERTY(zIndex, NSNumber, YamapMarkerView) {
-    [view setZIndex: json];
+  [view setZIndex: json];
 }
 
 RCT_CUSTOM_VIEW_PROPERTY(source, NSString, YamapMarkerView) {
-    [view setSource: json];
+  [view setSource: json];
 }
 
 @end

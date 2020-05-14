@@ -36,123 +36,134 @@
 #define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
 @implementation YamapMarkerView {
-    YMKPoint* _point;
-    YMKPlacemarkMapObject* mapObject;
-    NSNumber* zIndex;
-    NSNumber* scale;
-    NSString* source;
-    NSString* lastSource;
-    NSMutableArray<UIView*>* _reactSubviews;
-    UIView* _childView;
+  YMKPoint* _point;
+  YMKPlacemarkMapObject* mapObject;
+  NSNumber* zIndex;
+  NSNumber* scale;
+  NSValue* anchor;
+  NSString* source;
+  NSString* lastSource;
+  NSMutableArray<UIView*>* _reactSubviews;
+  UIView* _childView;
 }
 
 - (instancetype)init {
-    self = [super init];
-    zIndex =  [[NSNumber alloc] initWithInt:1];
-    scale =  [[NSNumber alloc] initWithInt:1];
-    _reactSubviews = [[NSMutableArray alloc] init];
-    source = @"";
-    lastSource = @"";
-    return self;
+  self = [super init];
+  zIndex = [[NSNumber alloc] initWithInt:1];
+  scale = [[NSNumber alloc] initWithInt:1];
+  
+  CGPoint anchorPoint = CGPointMake(0.5, 0.5);
+  anchor = [NSValue valueWithCGPoint:anchorPoint];
+  
+  _reactSubviews = [[NSMutableArray alloc] init];
+  source = @"";
+  lastSource = @"";
+  
+  return self;
 }
 
 -(void) updateMarker {
-    if (mapObject != nil) {
-        [mapObject setGeometry:_point];
-        [mapObject setZIndex:[zIndex floatValue]];
-        YMKIconStyle* iconStyle = [[YMKIconStyle alloc] init];
-        [iconStyle setScale:scale];
-        if (![source isEqual:@""]) {
-            if (![source isEqual:lastSource]) {
-                [mapObject setIconWithImage:[self resolveUIImage:source]];
-                lastSource = source;
-            }
-        }
-        [mapObject setIconStyleWithStyle:iconStyle];
+  if (mapObject != nil) {
+    [mapObject setGeometry:_point];
+    [mapObject setZIndex:[zIndex floatValue]];
+    YMKIconStyle* iconStyle = [[YMKIconStyle alloc] init];
+    [iconStyle setScale:scale];
+    [iconStyle setAnchor:anchor];
+    if (![source isEqual:@""]) {
+      if (![source isEqual:lastSource]) {
+        [mapObject setIconWithImage:[self resolveUIImage:source]];
+        lastSource = source;
+      }
     }
+    [mapObject setIconStyleWithStyle:iconStyle];
+  }
 }
 
 -(void) setScale:(NSNumber*) _scale {
-    scale = _scale;
-    [self updateMarker];
+  scale = _scale;
+  [self updateMarker];
+}
+-(void) setAnchor:(NSValue*) _anchor {
+  anchor = _anchor;
+  [self updateMarker];
 }
 -(void) setZIndex:(NSNumber*) _zIndex {
-    zIndex = _zIndex;
-    [self updateMarker];
+  zIndex = _zIndex;
+  [self updateMarker];
 }
 
 -(void) setPoint:(YMKPoint*) point {
-    _point = point;
-    [self updateMarker];
+  _point = point;
+  [self updateMarker];
 }
 
 -(UIImage*) resolveUIImage:(NSString*) uri {
-    UIImage *icon;
-    if ([uri rangeOfString:@"http://"].location == NSNotFound && [uri rangeOfString:@"https://"].location == NSNotFound) {
-        if ([uri rangeOfString:@"file://"].location != NSNotFound){
-            NSString *file = [uri substringFromIndex:8];
-            icon = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL fileURLWithPath:file]]];
-        } else {
-            icon = [UIImage imageNamed:uri];
-        }
+  UIImage *icon;
+  if ([uri rangeOfString:@"http://"].location == NSNotFound && [uri rangeOfString:@"https://"].location == NSNotFound) {
+    if ([uri rangeOfString:@"file://"].location != NSNotFound){
+      NSString *file = [uri substringFromIndex:8];
+      icon = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL fileURLWithPath:file]]];
     } else {
-        icon = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:uri]]];
+      icon = [UIImage imageNamed:uri];
     }
-    return icon;
+  } else {
+    icon = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:uri]]];
+  }
+  return icon;
 }
 
 -(void) setSource:(NSString*) _source {
-    source = _source;
-    [self updateMarker];
+  source = _source;
+  [self updateMarker];
 }
 -(void) setMapObject:(YMKPlacemarkMapObject *)_mapObject {
-    mapObject = _mapObject;
-    [mapObject addTapListenerWithTapListener:self];
-    [self updateMarker];
+  mapObject = _mapObject;
+  [mapObject addTapListenerWithTapListener:self];
+  [self updateMarker];
 }
 // object tap listener
 - (BOOL)onMapObjectTapWithMapObject:(nonnull YMKMapObject *)_mapObject point:(nonnull YMKPoint *)point {
-    if (self.onPress) self.onPress(@{});
-    return YES;
+  if (self.onPress) self.onPress(@{});
+  return YES;
 }
 
 -(YMKPoint*) getPoint {
-    return _point;
+  return _point;
 }
 
 -(YMKPlacemarkMapObject*) getMapObject {
-    return mapObject;
+  return mapObject;
 }
 
 -(void) setChildView {
-    if ([_reactSubviews count] > 0) {
-        _childView = [_reactSubviews objectAtIndex:0];
-        if (_childView != nil) {
-            [_childView setOpaque:false];
-            YRTViewProvider* v = [[YRTViewProvider alloc] initWithUIView:_childView];
-            if (v != nil) {
-                [mapObject setViewWithView:v];
-            }
-        }
-    } else {
-        _childView = nil;
+  if ([_reactSubviews count] > 0) {
+    _childView = [_reactSubviews objectAtIndex:0];
+    if (_childView != nil) {
+      [_childView setOpaque:false];
+      YRTViewProvider* v = [[YRTViewProvider alloc] initWithUIView:_childView];
+      if (v != nil) {
+        [mapObject setViewWithView:v];
+      }
     }
+  } else {
+    _childView = nil;
+  }
 }
 
 -(void) didUpdateReactSubviews {
-    // todo: Если вызывать сразу то frame имеет размеры 0. В идеале делать подписку на событие
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 0.5 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
-        [self setChildView];
-    });
+  // todo: Если вызывать сразу то frame имеет размеры 0. В идеале делать подписку на событие
+  dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 0.5 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+    [self setChildView];
+  });
 }
 - (void)insertReactSubview:(UIView*) subview atIndex:(NSInteger)atIndex {
-    [_reactSubviews insertObject:subview atIndex: atIndex];
-    [super insertReactSubview:subview atIndex:atIndex];
+  [_reactSubviews insertObject:subview atIndex: atIndex];
+  [super insertReactSubview:subview atIndex:atIndex];
 }
 
 - (void)removeReactSubview:(UIView*) subview {
-    [_reactSubviews removeObject:subview];
-    [super removeReactSubview: subview];
+  [_reactSubviews removeObject:subview];
+  [super removeReactSubview: subview];
 }
 
 @end
