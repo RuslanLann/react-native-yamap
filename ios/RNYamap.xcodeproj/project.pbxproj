@@ -33,7 +33,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		134814201AA4EA6300B7C361 /* libRNYamap.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNYamap.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CA9027D22E1E52D00C144AA /* YamapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YamapView.h; sourceTree = "<group>"; };
 		B3E7B5881CC2AC0600A0062D /* RNYamap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNYamap.h; sourceTree = "<group>"; };
 		B3E7B5891CC2AC0600A0062D /* RNYamap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNYamap.m; sourceTree = "<group>"; };
@@ -57,6 +56,8 @@
 		E10B9C70246D29A300764F7A /* YamapCircle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YamapCircle.m; sourceTree = "<group>"; };
 		E10B9C79246D29CC00764F7A /* YamapCircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YamapCircleView.swift; sourceTree = "<group>"; };
 		E10B9C7E246D2D4E00764F7A /* RNYamap-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RNYamap-Bridging-Header.h"; sourceTree = "<group>"; };
+		E10B9C80246D2FF700764F7A /* libRNYamap.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNYamap.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E10B9C82246D304A00764F7A /* libRNYamap.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libRNYamap.a; path = "../../../../../../Library/Developer/Xcode/DerivedData/RNYamap-eyoctficietuwyhezgdzjorvkhib/Build/Products/Debug-iphonesimulator/libRNYamap.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,14 +71,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		134814211AA4EA7D00B7C361 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				134814201AA4EA6300B7C361 /* libRNYamap.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
@@ -95,7 +88,8 @@
 				E10B9C6C246D29A300764F7A /* YamapPolygon.m */,
 				E10B9C6B246D29A300764F7A /* YamapPolyline.h */,
 				E10B9C69246D29A300764F7A /* YamapPolyline.m */,
-				134814211AA4EA7D00B7C361 /* Products */,
+				E10B9C80246D2FF700764F7A /* libRNYamap.a */,
+				E10B9C81246D304200764F7A /* Product */,
 			);
 			sourceTree = "<group>";
 		};
@@ -122,6 +116,14 @@
 				E10B9C7E246D2D4E00764F7A /* RNYamap-Bridging-Header.h */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		E10B9C81246D304200764F7A /* Product */ = {
+			isa = PBXGroup;
+			children = (
+				E10B9C82246D304A00764F7A /* libRNYamap.a */,
+			);
+			path = Product;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,7 +165,7 @@
 			);
 			name = RNYamap;
 			productName = RCTDataManager;
-			productReference = 134814201AA4EA6300B7C361 /* libRNYamap.a */;
+			productReference = E10B9C80246D2FF700764F7A /* libRNYamap.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -273,7 +275,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
-				SWIFT_OBJC_BRIDGING_HEADER = "RNYamap-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "View/RNYamap-Bridging-Header.h";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "RNYamap-Swift.h";
 			};
 			name = Debug;
@@ -311,7 +313,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OBJC_BRIDGING_HEADER = "RNYamap-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "View/RNYamap-Bridging-Header.h";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "RNYamap-Swift.h";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -321,6 +323,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -332,7 +335,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = RNYamap;
 				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "RNYamap-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "View/RNYamap-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
@@ -342,6 +345,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -353,7 +357,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = RNYamap;
 				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "RNYamap-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "View/RNYamap-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
