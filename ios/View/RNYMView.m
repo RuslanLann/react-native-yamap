@@ -32,7 +32,7 @@
 #import <NSObjCRuntime.h>
 #endif
 
-#import "rnyamapswift-Swift.h"
+#import "RNYamap-Swift.h"
 #import "YamapPolygonView.h"
 #import "YamapPolylineView.h"
 #import "YamapMarkerView.h"

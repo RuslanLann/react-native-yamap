@@ -6,7 +6,7 @@
 #import "View/RNYMView.h"
 #import "Converter/RCTConvert+Yamap.m"
 
-#import "rnyamapswift-Swift.h"
+#import "RNYamap-Swift.h"
 
 #ifndef MAX
 #import <NSObjCRuntime.h>
