@@ -86,7 +86,7 @@
   YMKUserLocationLayer *userLayer = [inst createUserLocationLayerWithMapWindow: self.mapWindow];
   userLocationView = nil;
   userLocationImage = nil;
-  userLocationIconScale =  [[NSNumber alloc] initWithInt:1];
+  userLocationIconScale = [[NSNumber alloc] initWithFloat:0.2];
   [userLayer setVisibleWithOn:YES];
   [userLayer setObjectListenerWithObjectListener: self];
   return self;
