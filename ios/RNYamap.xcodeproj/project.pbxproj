@@ -14,8 +14,21 @@
 		D6ABBD5B2236A9600060C368 /* RNYMView.h in Headers */ = {isa = PBXBuildFile; fileRef = D6ABBD592236A9600060C368 /* RNYMView.h */; };
 		D6ABBD5C2236A9600060C368 /* RNYMView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6ABBD5A2236A9600060C368 /* RNYMView.m */; };
 		D6D0D4D3222E7E4900838171 /* RCTConvert+Yamap.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D0D4D2222E7E4900838171 /* RCTConvert+Yamap.m */; };
-		D6D0D4FE222EA5E900838171 /* RNMarker.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D0D4FC222EA5E900838171 /* RNMarker.m */; };
-		D6D0D4FF222EA5E900838171 /* RNMarker.h in Headers */ = {isa = PBXBuildFile; fileRef = D6D0D4FD222EA5E900838171 /* RNMarker.h */; };
+		E10B9C5E246D289400764F7A /* YamapPolylineView.m in Sources */ = {isa = PBXBuildFile; fileRef = E10B9C5D246D289400764F7A /* YamapPolylineView.m */; };
+		E10B9C60246D28A000764F7A /* YamapPolylineView.h in Headers */ = {isa = PBXBuildFile; fileRef = E10B9C5F246D28A000764F7A /* YamapPolylineView.h */; };
+		E10B9C62246D298000764F7A /* YamapPolygonView.m in Sources */ = {isa = PBXBuildFile; fileRef = E10B9C61246D298000764F7A /* YamapPolygonView.m */; };
+		E10B9C66246D298800764F7A /* YamapPolygonView.h in Headers */ = {isa = PBXBuildFile; fileRef = E10B9C63246D298800764F7A /* YamapPolygonView.h */; };
+		E10B9C67246D298800764F7A /* YamapMarkerView.h in Headers */ = {isa = PBXBuildFile; fileRef = E10B9C64246D298800764F7A /* YamapMarkerView.h */; };
+		E10B9C68246D298800764F7A /* YamapMarkerView.m in Sources */ = {isa = PBXBuildFile; fileRef = E10B9C65246D298800764F7A /* YamapMarkerView.m */; };
+		E10B9C71246D29A300764F7A /* YamapPolyline.m in Sources */ = {isa = PBXBuildFile; fileRef = E10B9C69246D29A300764F7A /* YamapPolyline.m */; };
+		E10B9C72246D29A300764F7A /* YamapCircle.h in Headers */ = {isa = PBXBuildFile; fileRef = E10B9C6A246D29A300764F7A /* YamapCircle.h */; };
+		E10B9C73246D29A300764F7A /* YamapPolyline.h in Headers */ = {isa = PBXBuildFile; fileRef = E10B9C6B246D29A300764F7A /* YamapPolyline.h */; };
+		E10B9C74246D29A300764F7A /* YamapPolygon.m in Sources */ = {isa = PBXBuildFile; fileRef = E10B9C6C246D29A300764F7A /* YamapPolygon.m */; };
+		E10B9C75246D29A300764F7A /* YamapPolygon.h in Headers */ = {isa = PBXBuildFile; fileRef = E10B9C6D246D29A300764F7A /* YamapPolygon.h */; };
+		E10B9C76246D29A300764F7A /* YamapMarker.h in Headers */ = {isa = PBXBuildFile; fileRef = E10B9C6E246D29A300764F7A /* YamapMarker.h */; };
+		E10B9C77246D29A300764F7A /* YamapMarker.m in Sources */ = {isa = PBXBuildFile; fileRef = E10B9C6F246D29A300764F7A /* YamapMarker.m */; };
+		E10B9C78246D29A300764F7A /* YamapCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = E10B9C70246D29A300764F7A /* YamapCircle.m */; };
+		E10B9C7A246D29CC00764F7A /* YamapCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10B9C79246D29CC00764F7A /* YamapCircleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,8 +40,21 @@
 		D6ABBD592236A9600060C368 /* RNYMView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNYMView.h; sourceTree = "<group>"; };
 		D6ABBD5A2236A9600060C368 /* RNYMView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNYMView.m; sourceTree = "<group>"; };
 		D6D0D4D2222E7E4900838171 /* RCTConvert+Yamap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RCTConvert+Yamap.m"; sourceTree = "<group>"; };
-		D6D0D4FC222EA5E900838171 /* RNMarker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNMarker.m; sourceTree = "<group>"; };
-		D6D0D4FD222EA5E900838171 /* RNMarker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNMarker.h; sourceTree = "<group>"; };
+		E10B9C5D246D289400764F7A /* YamapPolylineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YamapPolylineView.m; sourceTree = "<group>"; };
+		E10B9C5F246D28A000764F7A /* YamapPolylineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YamapPolylineView.h; sourceTree = "<group>"; };
+		E10B9C61246D298000764F7A /* YamapPolygonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YamapPolygonView.m; sourceTree = "<group>"; };
+		E10B9C63246D298800764F7A /* YamapPolygonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YamapPolygonView.h; sourceTree = "<group>"; };
+		E10B9C64246D298800764F7A /* YamapMarkerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YamapMarkerView.h; sourceTree = "<group>"; };
+		E10B9C65246D298800764F7A /* YamapMarkerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YamapMarkerView.m; sourceTree = "<group>"; };
+		E10B9C69246D29A300764F7A /* YamapPolyline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YamapPolyline.m; sourceTree = "<group>"; };
+		E10B9C6A246D29A300764F7A /* YamapCircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YamapCircle.h; sourceTree = "<group>"; };
+		E10B9C6B246D29A300764F7A /* YamapPolyline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YamapPolyline.h; sourceTree = "<group>"; };
+		E10B9C6C246D29A300764F7A /* YamapPolygon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YamapPolygon.m; sourceTree = "<group>"; };
+		E10B9C6D246D29A300764F7A /* YamapPolygon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YamapPolygon.h; sourceTree = "<group>"; };
+		E10B9C6E246D29A300764F7A /* YamapMarker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YamapMarker.h; sourceTree = "<group>"; };
+		E10B9C6F246D29A300764F7A /* YamapMarker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YamapMarker.m; sourceTree = "<group>"; };
+		E10B9C70246D29A300764F7A /* YamapCircle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YamapCircle.m; sourceTree = "<group>"; };
+		E10B9C79246D29CC00764F7A /* YamapCircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YamapCircleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,12 +80,19 @@
 			isa = PBXGroup;
 			children = (
 				D6F326A923C26911000C7D4A /* View */,
-				D6F326AA23C26923000C7D4A /* Models */,
 				D6F326A823C268CB000C7D4A /* Converter */,
-				D6ABBD13223667300060C368 /* YamapView.m */,
-				3CA9027D22E1E52D00C144AA /* YamapView.h */,
 				B3E7B5881CC2AC0600A0062D /* RNYamap.h */,
 				B3E7B5891CC2AC0600A0062D /* RNYamap.m */,
+				D6ABBD13223667300060C368 /* YamapView.m */,
+				3CA9027D22E1E52D00C144AA /* YamapView.h */,
+				E10B9C6A246D29A300764F7A /* YamapCircle.h */,
+				E10B9C70246D29A300764F7A /* YamapCircle.m */,
+				E10B9C6E246D29A300764F7A /* YamapMarker.h */,
+				E10B9C6F246D29A300764F7A /* YamapMarker.m */,
+				E10B9C6D246D29A300764F7A /* YamapPolygon.h */,
+				E10B9C6C246D29A300764F7A /* YamapPolygon.m */,
+				E10B9C6B246D29A300764F7A /* YamapPolyline.h */,
+				E10B9C69246D29A300764F7A /* YamapPolyline.m */,
 				134814211AA4EA7D00B7C361 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -75,19 +108,17 @@
 		D6F326A923C26911000C7D4A /* View */ = {
 			isa = PBXGroup;
 			children = (
-				D6ABBD592236A9600060C368 /* RNYMView.h */,
 				D6ABBD5A2236A9600060C368 /* RNYMView.m */,
+				D6ABBD592236A9600060C368 /* RNYMView.h */,
+				E10B9C65246D298800764F7A /* YamapMarkerView.m */,
+				E10B9C64246D298800764F7A /* YamapMarkerView.h */,
+				E10B9C61246D298000764F7A /* YamapPolygonView.m */,
+				E10B9C63246D298800764F7A /* YamapPolygonView.h */,
+				E10B9C5D246D289400764F7A /* YamapPolylineView.m */,
+				E10B9C5F246D28A000764F7A /* YamapPolylineView.h */,
+				E10B9C79246D29CC00764F7A /* YamapCircleView.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		D6F326AA23C26923000C7D4A /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				D6D0D4FD222EA5E900838171 /* RNMarker.h */,
-				D6D0D4FC222EA5E900838171 /* RNMarker.m */,
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -97,8 +128,14 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E10B9C67246D298800764F7A /* YamapMarkerView.h in Headers */,
+				E10B9C73246D29A300764F7A /* YamapPolyline.h in Headers */,
+				E10B9C72246D29A300764F7A /* YamapCircle.h in Headers */,
+				E10B9C76246D29A300764F7A /* YamapMarker.h in Headers */,
+				E10B9C75246D29A300764F7A /* YamapPolygon.h in Headers */,
+				E10B9C66246D298800764F7A /* YamapPolygonView.h in Headers */,
+				E10B9C60246D28A000764F7A /* YamapPolylineView.h in Headers */,
 				3CA9027E22E1E52D00C144AA /* YamapView.h in Headers */,
-				D6D0D4FF222EA5E900838171 /* RNMarker.h in Headers */,
 				D6ABBD5B2236A9600060C368 /* RNYMView.h in Headers */,
 				D615FE4C222D655B0044E3FA /* RNYamap.h in Headers */,
 			);
@@ -173,11 +210,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E10B9C68246D298800764F7A /* YamapMarkerView.m in Sources */,
+				E10B9C74246D29A300764F7A /* YamapPolygon.m in Sources */,
+				E10B9C78246D29A300764F7A /* YamapCircle.m in Sources */,
 				D6ABBD5C2236A9600060C368 /* RNYMView.m in Sources */,
+				E10B9C5E246D289400764F7A /* YamapPolylineView.m in Sources */,
+				E10B9C62246D298000764F7A /* YamapPolygonView.m in Sources */,
 				B3E7B58A1CC2AC0600A0062D /* RNYamap.m in Sources */,
 				D6ABBD14223667300060C368 /* YamapView.m in Sources */,
+				E10B9C71246D29A300764F7A /* YamapPolyline.m in Sources */,
+				E10B9C7A246D29CC00764F7A /* YamapCircleView.swift in Sources */,
+				E10B9C77246D29A300764F7A /* YamapMarker.m in Sources */,
 				D6D0D4D3222E7E4900838171 /* RCTConvert+Yamap.m in Sources */,
-				D6D0D4FE222EA5E900838171 /* RNMarker.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
