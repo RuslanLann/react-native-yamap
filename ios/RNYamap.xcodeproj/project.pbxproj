@@ -16,6 +16,7 @@
 		D6D0D4D3222E7E4900838171 /* RCTConvert+Yamap.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D0D4D2222E7E4900838171 /* RCTConvert+Yamap.m */; };
 		D6D0D4FE222EA5E900838171 /* RNMarker.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D0D4FC222EA5E900838171 /* RNMarker.m */; };
 		D6D0D4FF222EA5E900838171 /* RNMarker.h in Headers */ = {isa = PBXBuildFile; fileRef = D6D0D4FD222EA5E900838171 /* RNMarker.h */; };
+		E10B9C54246D141000764F7A /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10B9C53246D141000764F7A /* File.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		D6D0D4FC222EA5E900838171 /* RNMarker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNMarker.m; sourceTree = "<group>"; };
 		D6D0D4FD222EA5E900838171 /* RNMarker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNMarker.h; sourceTree = "<group>"; };
 		E10B9C41246CFFA900764F7A /* RNYamap-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RNYamap-Bridging-Header.h"; sourceTree = "<group>"; };
+		E10B9C53246D141000764F7A /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
+				E10B9C53246D141000764F7A /* File.swift */,
 				D6F326A923C26911000C7D4A /* View */,
 				D6F326AA23C26923000C7D4A /* Models */,
 				D6F326A823C268CB000C7D4A /* Converter */,
@@ -176,6 +179,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6ABBD5C2236A9600060C368 /* RNYMView.m in Sources */,
+				E10B9C54246D141000764F7A /* File.swift in Sources */,
 				B3E7B58A1CC2AC0600A0062D /* RNYamap.m in Sources */,
 				D6ABBD14223667300060C368 /* YamapView.m in Sources */,
 				D6D0D4D3222E7E4900838171 /* RCTConvert+Yamap.m in Sources */,
@@ -227,6 +231,8 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "RNYamap-Bridging-Header.h";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "RNYamap-Swift.h";
 			};
 			name = Debug;
 		};
@@ -263,6 +269,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "RNYamap-Bridging-Header.h";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "RNYamap-Swift.h";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
