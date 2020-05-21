@@ -28,6 +28,7 @@
 		E10B9C76246D29A300764F7A /* YamapMarker.h in Headers */ = {isa = PBXBuildFile; fileRef = E10B9C6E246D29A300764F7A /* YamapMarker.h */; };
 		E10B9C77246D29A300764F7A /* YamapMarker.m in Sources */ = {isa = PBXBuildFile; fileRef = E10B9C6F246D29A300764F7A /* YamapMarker.m */; };
 		E10B9C78246D29A300764F7A /* YamapCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = E10B9C70246D29A300764F7A /* YamapCircle.m */; };
+		E161697C24766DE000CB3C64 /* YamapCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E161697B24766DE000CB3C64 /* YamapCircleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,8 @@
 		E10B9C70246D29A300764F7A /* YamapCircle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YamapCircle.m; sourceTree = "<group>"; };
 		E10B9C80246D2FF700764F7A /* libRNYamap.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNYamap.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E10B9C82246D304A00764F7A /* libRNYamap.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libRNYamap.a; path = "../../../../../../Library/Developer/Xcode/DerivedData/RNYamap-eyoctficietuwyhezgdzjorvkhib/Build/Products/Debug-iphonesimulator/libRNYamap.a"; sourceTree = "<group>"; };
+		E161697B24766DE000CB3C64 /* YamapCircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YamapCircleView.swift; sourceTree = "<group>"; };
+		E161697D24766E4200CB3C64 /* RNYamap-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RNYamap-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +73,7 @@
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
+				E161697D24766E4200CB3C64 /* RNYamap-Bridging-Header.h */,
 				D6F326A923C26911000C7D4A /* View */,
 				D6F326A823C268CB000C7D4A /* Converter */,
 				B3E7B5881CC2AC0600A0062D /* RNYamap.h */,
@@ -100,6 +104,7 @@
 		D6F326A923C26911000C7D4A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E161697B24766DE000CB3C64 /* YamapCircleView.swift */,
 				D6ABBD5A2236A9600060C368 /* RNYMView.m */,
 				D6ABBD592236A9600060C368 /* RNYMView.h */,
 				E10B9C65246D298800764F7A /* YamapMarkerView.m */,
@@ -218,6 +223,7 @@
 				B3E7B58A1CC2AC0600A0062D /* RNYamap.m in Sources */,
 				D6ABBD14223667300060C368 /* YamapView.m in Sources */,
 				E10B9C71246D29A300764F7A /* YamapPolyline.m in Sources */,
+				E161697C24766DE000CB3C64 /* YamapCircleView.swift in Sources */,
 				E10B9C77246D29A300764F7A /* YamapMarker.m in Sources */,
 				D6D0D4D3222E7E4900838171 /* RCTConvert+Yamap.m in Sources */,
 			);
@@ -327,7 +333,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = RNYamap;
 				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "View/RNYamap-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "RNYamap-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
@@ -349,7 +355,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = RNYamap;
 				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "View/RNYamap-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "RNYamap-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
