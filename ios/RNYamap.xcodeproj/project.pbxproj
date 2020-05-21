@@ -29,7 +29,6 @@
 		E10B9C77246D29A300764F7A /* YamapMarker.m in Sources */ = {isa = PBXBuildFile; fileRef = E10B9C6F246D29A300764F7A /* YamapMarker.m */; };
 		E10B9C78246D29A300764F7A /* YamapCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = E10B9C70246D29A300764F7A /* YamapCircle.m */; };
 		E161697C24766DE000CB3C64 /* YamapCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E161697B24766DE000CB3C64 /* YamapCircleView.swift */; };
-		E161697E2476769B00CB3C64 /* YamapCircleView.swift in Headers */ = {isa = PBXBuildFile; fileRef = E161697B24766DE000CB3C64 /* YamapCircleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -132,7 +131,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E10B9C67246D298800764F7A /* YamapMarkerView.h in Headers */,
-				E161697E2476769B00CB3C64 /* YamapCircleView.swift in Headers */,
 				E10B9C73246D29A300764F7A /* YamapPolyline.h in Headers */,
 				E10B9C72246D29A300764F7A /* YamapCircle.h in Headers */,
 				E10B9C76246D29A300764F7A /* YamapMarker.h in Headers */,

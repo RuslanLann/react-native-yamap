@@ -1,13 +1,12 @@
 #import <React/RCTViewManager.h>
 #import <MapKit/MapKit.h>
 #import <math.h>
+#import <RNYamap-Swift.h>
 
 #import "YamapCircle.h"
 #import "RNYamap.h"
 #import "View/RNYMView.h"
 #import "Converter/RCTConvert+Yamap.m"
-
-
 
 #ifndef MAX
 #import <NSObjCRuntime.h>
