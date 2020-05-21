@@ -11,6 +11,8 @@ Pod::Spec.new do |s|
     s.platform     = :ios, "9.0"
     s.source       = { :git => "https://github.com/author/RNYamap.git", :tag => "master" }
     s.source_files = "ios/**/*.{h,m,swift}"
+    s.preserve_path = "${POD_ROOT}/RNYamap/RNYamap-Bridging-Header.h"
+    s.xcconfig = { 'SWIFT_OBJC_BRIDGING_HEADER' => '${PODS_ROOT}/RNYamap/RNYamap-Bridging-Header.h' } 
     # s.requires_arc = true
 
     s.dependency "React"
