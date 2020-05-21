@@ -4,6 +4,7 @@
 #import <React/RCTBridgeModule.h>
 #endif
 #import "YamapView.h"
+#import <RNYamap-Swift.h>
 
 @interface yamap : NSObject <RCTBridgeModule>
 

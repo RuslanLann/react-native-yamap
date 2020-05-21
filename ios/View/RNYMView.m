@@ -27,7 +27,6 @@
 #import <YandexMapKitTransport/YMKMasstransitTransport.h>
 #import <YandexMapKitTransport/YMKMasstransitWeight.h>
 #import <YandexMapKitTransport/YMKTimeOptions.h>
-#import <RNYamap-Swift.h>
 
 #ifndef MAX
 #import <NSObjCRuntime.h>
